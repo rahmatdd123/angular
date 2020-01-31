@@ -1,0 +1,15 @@
+<app-menu></app-menu>
+<p>
+  form works!
+</p>
+<form #userlogin = "ngForm" (ngSubmit) = "onClickSubmit(userlogin.value)">
+  <label>Username</label>
+  <br/>
+  <input type="text" placeholder="Username" name="usrname" ngModel>
+  <br/>
+  <label>Password</label>
+  <br/>
+  <input type="password" placeholder="Password" name="usrpassword" ngModel>
+  <br>
+  <input type="submit" value="submit">
+</form>

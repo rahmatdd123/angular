@@ -1,0 +1,28 @@
+<div class="center">
+  <mat-card class="example-card">
+    <mat-card-header>
+      <mat-card-title>Register</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+      <br>
+      <form [formGroup]="userRegister"  class="example-form" style="font-size: 16px">
+        <mat-form-field appearance="outline" class="input">
+          <mat-label>Username</mat-label>
+          <input matInput type="text" placeholder="Username" 
+            [ngClass]="{ 'is-invalid': hasil == false}" formControlName="username" autocomplete="off">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="input">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Password" formControlName="password">
+        </mat-form-field>
+        <mat-form-field appearance="outline" class="input">
+          <mat-label>Password</mat-label>
+          <input matInput type="password" placeholder="Confirm Passowrd" formControlName="repassword">
+        </mat-form-field>
+        <br>
+        <button mat-button type="button" (click)="onClickSubmit(userRegister.value)">Register</button>
+        <a mat-button href="../">Back To Login</a>
+      </form>
+    </mat-card-content>
+  </mat-card>
+</div>

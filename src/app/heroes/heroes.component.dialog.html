@@ -1,0 +1,18 @@
+<h1 mat-dialog-title>Hi {{data.name}}</h1>
+<div mat-dialog-content>
+  <p>Modal</p>
+    <img *ngIf="data.binary != null" src="data:image/jpg;base64,{{data.binary}}" alt="photo">
+  <mat-form-field style="width: 100%;">
+    <input matInput placeholder="Task Name" [(ngModel)]="data.TaskName" required>
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+    <input matInput placeholder="Task Details" [(ngModel)]="data.TaskDetails">
+  </mat-form-field>
+  <mat-form-field style="width: 100%;">
+      <input matInput placeholder="Task Date" [(ngModel)]="data.TaskDate" required>
+  </mat-form-field>
+</div>
+<div mat-dialog-actions>
+    <button mat-button (click)="submit(data)">Submit</button>
+    <button mat-button [mat-dialog-close]>Close</button>
+</div>
